@@ -1,0 +1,130 @@
+:root {
+  --brand-color: #1757B6;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  padding: 20px 12px;
+  background-color: var(--brand-color);
+  color: white;
+}
+
+.nav .app-name {
+  font-weight: bold;
+  flex: 1;
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+}
+
+.header .app-icon {
+  width: 40%;
+}
+
+.header .app-name {
+  font-weight: bold;
+  color: var(--brand-color);
+  padding-bottom: 12px;
+}
+
+.header .app-tagline {
+  padding-bottom: 12px;
+}
+
+.header .store-badges {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.header .store-badges a {
+  flex: 1;
+}
+
+.header .store-badges img {
+  max-width: 100%;
+}
+
+/* feature */
+.feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.feature .desc {
+  flex: 1;
+}
+
+.feature img {
+  max-width: 30%;
+}
+.feature img {
+  min-width: 40%;
+  height: 300px;
+  background-color: gray;
+}
+
+.features .feature:nth-child(2n+1) {
+  background: var(--brand-color);
+  color: white;
+}
+
+.features .feature:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+/* usage button */
+.usage-button {
+  background: var(--brand-color);
+  padding: 12px 20px;
+  width: 80%;
+  color: white;
+  border-radius: 100px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: #eee;
+  font-size: 0.8em;
+  padding: 12px;
+  border-top: solid 1px #ddd;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
