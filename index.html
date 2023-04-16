@@ -9,9 +9,9 @@
 </head>
 <body>
 <nav class='nav'>
-  <div class='app-name'>MTG Playbook</div>
-  <div class='select-en'>English</div>
-  <div class='select-ja'>日本語</div>
+  <a class='app-name' href='/'>MTG Playbook</a>
+  <a class='select-en' href='?lang=en'>English</a>
+  <a class='select-ja' href='?lang=ja'>日本語</a>
 </nav>
 
 <div class='header'>
@@ -27,7 +27,13 @@
 <div class='features'>
   <div class='feature'>
     <img/>
-    <div class='desc'>
+    <div class='desc js-ja'>
+      ライフカウンター
+      <br/>
+      <br/>
+      一般的なライフカウンターに加えて、ゲームごとの勝敗や先手後手、マリガン回数の記録も行えます。またライフの履歴も見ることができます。
+    </div>
+    <div class='desc js-en'>
       Life Counter
       <br/>
       <br/>
@@ -37,7 +43,13 @@
 
   <div class='feature'>
     <img/>
-    <div class='desc'>
+    <div class='desc js-ja'>
+      マッチの一覧
+      <br/>
+      <br/>
+      これまで行ったマッチを日別の一覧で見ることができます。使用したデッキ、対戦相手のデッキ、ゲームごとの勝敗などが一目瞭然です。
+    </div>
+    <div class='desc js-en'>
       Matches List
       <br/>
       <br/>
@@ -47,7 +59,13 @@
 
   <div class='feature'>
     <img/>
-    <div class='desc'>
+    <div class='desc js-ja'>
+      マッチの詳細
+      <br/>
+      <br/>
+      マッチの詳細な記録を見ることができます。対戦相手やメモを記入したり、ゲームのライフ履歴、マリガン回数、ゲームにかかった時間なども表示されます。
+    </div>
+    <div class='desc js-en'>
       Match Details
       <br/>
       <br/>
@@ -57,7 +75,13 @@
 
   <div class='feature'>
     <img/>
-    <div class='desc'>
+    <div class='desc js-ja'>
+      マッチの分析
+      <br/>
+      <br/>
+      デッキの勝率推移や、対戦デッキごとの勝率、マリガン回数の分布などを見ることができます。また、使用デッキや期間を自由に変更して分析することもできます。
+    </div>
+    <div class='desc js-en'>
       Match Analysis
       <br/>
       <br/>
@@ -80,5 +104,19 @@
     © 2023 Ryo Maruyama. All right reserved.
   </div>
 </footer>
+
+<script type='text/javascript'>
+  const queryLang =  new URLSearchParams(location.search).get('lang');
+  const lang = (queryLang || navigator.language) === 'ja' ? 'ja' : 'en';
+  if (lang === 'ja') {
+    document.querySelectorAll('.js-en').forEach(el => {
+      el.style.display = 'none';
+    });
+  } else {
+    document.querySelectorAll('.js-ja').forEach(el => {
+      el.style.display = 'none';
+    });
+  }
+</script>
 </body>
 </html>
