@@ -22,6 +22,10 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* nav */
 .nav {
   display: flex;
