@@ -105,6 +105,7 @@ a {
 
 /* usage button */
 .usage-button {
+  display: block;
   background: var(--brand-color);
   padding: 12px 20px;
   width: 80%;
