@@ -94,8 +94,8 @@ img {
   flex: 1;
 }
 
-.feature img {
-  max-width: 50%;
+.feature .feature-image-wrap {
+  width: 50%;
 }
 
 .features .feature:nth-child(2n+1) {
