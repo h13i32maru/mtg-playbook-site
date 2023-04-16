@@ -91,12 +91,7 @@ a {
 }
 
 .feature img {
-  max-width: 30%;
-}
-.feature img {
-  min-width: 40%;
-  height: 300px;
-  background-color: gray;
+  max-width: 50%;
 }
 
 .features .feature:nth-child(2n+1) {
