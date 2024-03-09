@@ -140,7 +140,7 @@
 
 <script type='text/javascript'>
   const queryLang =  new URLSearchParams(location.search).get('lang');
-  const lang = (queryLang || navigator.language) === 'ja' ? 'ja' : 'en';
+  const lang = (queryLang || navigator.language).includes('ja') ? 'ja' : 'en';
   if (lang === 'ja') {
     document.querySelectorAll('.js-en').forEach(el => {
       el.style.display = 'none';
